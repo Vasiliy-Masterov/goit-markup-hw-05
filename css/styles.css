@@ -57,11 +57,22 @@ img {
 .nav-section-item:not(:last-child) {
   margin-right: 50px;
 }
+
 .nav-section-link {
   display: block;
   padding: 32px 0;
+  position: relative;
 }
-
+.nav-section-link.current::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--accent-color);
+}
 .header-list {
   display: flex;
   align-items: center;
@@ -142,6 +153,23 @@ img {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+  position: relative;
+}
+
+.occupation-item-bottom {
+  position: absolute;
+  background-color: var(--bg-occupation-color);
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.occupation-item-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white-color);
 }
 
 .team-container {
@@ -364,6 +392,7 @@ img {
   --footer-white-color: #ffffff9a;
   --bg-light-color: #f5f4fa;
   --bg-dark-color: #2f303a;
+  --bg-occupation-color: #2f303acc;
   --project-border-color: #eeeeee;
   --header-border-color: #ececec;
   --fill-icon-color: #afb1b8;
