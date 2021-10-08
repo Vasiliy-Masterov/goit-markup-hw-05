@@ -175,6 +175,9 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -191,11 +194,6 @@ img {
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-.team-social-icon:hover,
-.team-social-icon:hover {
-  fill: var(--white-color);
 }
 
 /*--Позиционирование Постоянных клиентов--*/
@@ -220,6 +218,9 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -271,7 +272,11 @@ img {
 
 .project-link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .project-link:hover,
 .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -313,6 +318,9 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: var(--bg-footer-icon-color);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -401,6 +409,9 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--nav-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-section-link:hover,
@@ -431,6 +442,9 @@ body {
   font-style: normal;
   line-height: 1.7;
   color: var(--footer-white-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-logo,
@@ -575,6 +589,9 @@ body {
   border: none;
   padding: 6px 22px;
   border-radius: 4px;
+  transition-property: background-color, box-shadow, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
