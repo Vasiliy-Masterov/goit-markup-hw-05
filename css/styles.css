@@ -70,7 +70,7 @@ img {
   height: 4px;
   border-radius: 2px;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   background-color: var(--accent-color);
 }
 .header-list {
@@ -288,7 +288,38 @@ img {
   margin-left: 30px;
   margin-top: 30px;
 }
+.project-link-top {
+  position: relative;
+  overflow: hidden;
+}
 
+.project-overlay {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  bottom: -100%;
+  transform: translateY(0%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
+  transform: translateY(-100%);
+}
+
+.project-overlay-text {
+  width: 322px;
+  height: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--white-color);
+}
 .project-content {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -383,6 +414,52 @@ img {
   color: #ffffff;
 }
 
+/*----------Позиционирование модального окна---------*/
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-modal-overlay-color);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.close-button {
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: var(--close-border-color);
+}
+
+.close-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--nav-text-color);
+}
+
 :root {
   --accent-color: #2196f3;
   --nav-text-color: #000000;
@@ -397,6 +474,8 @@ img {
   --header-border-color: #ececec;
   --fill-icon-color: #afb1b8;
   --bg-footer-icon-color: #ffffff19;
+  --bg-modal-overlay-color: #00000033;
+  --close-border-color: #0000001a;
 }
 
 body {
