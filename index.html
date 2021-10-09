@@ -59,11 +59,10 @@
         </header>
         <!-- Шапка или Hero-->
         <main>
-           
             <section class="hero-section">
                 <div class="container hero-container">
                     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-button" type="button" >Заказать услугу</button>
+                    <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
                 </div>
             </section>
             <!--Особенности-->
@@ -135,9 +134,24 @@
                 <div class="container">
                 <h2 class="occupation-title" >Чем мы занимаемся</h2>
                 <ul class="occupation-list list">
-                    <li class="occupation-item"><img class="occupation-img" src="./images/box_1.jpg" alt="Планшет и клавиатура " width="370"></li>
-                    <li class="occupation-item"><img class="occupation-img" src="./images/box_2.jpg" alt="Телефон" width="370"></li>
-                    <li class="occupation-item"><img class="occupation-img" src="./images/box_3.jpg" alt="Планшет с палитрой цветов" width="370"></li>
+                    <li class="occupation-item">
+                        <img class="occupation-img" src="./images/box_1.jpg" alt="Планшет и клавиатура " width="370">
+                        <div class="occupation-item-bottom">
+                            <p class="occupation-item-text">Десктопные приложения</p>
+                        </div>
+                    </li>
+                    <li class="occupation-item">
+                        <img class="occupation-img" src="./images/box_2.jpg" alt="Телефон" width="370">
+                        <div class="occupation-item-bottom">
+                            <p class="occupation-item-text">Мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="occupation-item">
+                        <img class="occupation-img" src="./images/box_3.jpg" alt="Планшет с палитрой цветов" width="370">
+                        <div class="occupation-item-bottom">
+                            <p class="occupation-item-text">Дизайнерские решения</p>
+                        </div>
+                    </li>
                 </ul>
                 </div>
             </section>
@@ -428,6 +442,16 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="close-button" data-modal-close>
+                    <svg class="close-icon">
+                        <use href="./images/sprite.svg#icon-close">
+                        </use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     <script src="./js/modal.js"></script>
     </body>
 </html>     
